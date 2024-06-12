@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Disk Size Results</h1>
+        <h2>Datacenter: {{ datacenter }}</h2>
+        <h2>Environment: {{ environment }}</h2>
+        <h2>VM Name: {{ vm_name }}</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Disk Index</th>
+                    <th>Disk Size (GB)</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for index, disk in enumerate(disks) %}
+                <tr>
+                    <td>{{ index + 1 }}</td>
+                    <td>{{ disk }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <a href="{{ url_for('index') }}">Go Back</a>
+    </div>
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</body>
+</html>

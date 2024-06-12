@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Machine Entry Form</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Enter Machine Details</h1>
+        <form action="{{ url_for('submit') }}" method="post">
+            <label for="datacenter">Datacenter:</label>
+            <select id="datacenter" name="datacenter" style="width: 100%;" required>
+                <option value="dc1">saitama</option>
+                <option value="dc2">saitama</option>
+                <option value="dc2">toyosu</option>
+                <option value="dc2">toyosu</option>
+                <option value="dc2">hongkong</option>
+                <option value="dc2">hongkong</option>
+                <option value="dc2">singapore</option>
+                <option value="dc2">singapore</option>
+                <option value="dc2">redhill</option>
+                <option value="dc2">redhill</option>
+                <option value="dc2">working</option>
+                <option value="dc2">piscataway</option>
+                <option value="dc2">piscataway</option>
+                <option value="dc2">totowa</option>
+                
+                <!-- Add more datacenter options as needed -->
+            </select>
+
+            <label for="environment">Environment:</label>
+            <select id="environment" name="environment" style="width: 100%;" required>
+                <option value="prod">p</option>
+                <option value="non-prod">np</option>
+            </select>
+
+            <label for="vm_name">VM Name:</label>
+            <input type="text" id="vm_name" name="vm_name" required>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</body>
+</html>
