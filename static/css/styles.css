@@ -69,3 +69,22 @@ a {
 a:hover {
     text-decoration: underline;
 }
+
+
+/* CSS to style flashed messages */
+.flashed-messages {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f0f0f0; /* Background color */
+    padding: 10px 20px; /* Padding for spacing */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Optional: Box shadow for depth */
+    z-index: 1000; /* Ensure it appears above other content */
+}
+
+.flashed-messages p {
+    margin: 5px 0; /* Space between messages */
+    color: #333; /* Text color */
+    /* Additional styles can be added as per design requirements */
+}
